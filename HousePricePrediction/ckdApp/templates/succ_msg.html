@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block body_block %}
+{% load static %}
+<div class="jumbotron">
+    <h1>House Price Prediction </h1>
+    <div class="fieldWrapper">
+      <h2>For the values</h2>
+      <p>area:{{data_area}}</p>
+      <p>bedrooms:{{data_bed}}</p>
+      <p>bathrooms:{{data_bath}}</p>
+      <p>stories:{{data_stories}}</p>
+      <p>parking:{{data_park}}</p>
+      <p>mainroad_yes:{{data_mainroad}}</p>
+      <p>guestroom_yes:{{data_guestroom}}</p>
+      <p>basement_yes:{{data_basement}}</p>
+      <p>hotwaterheating_yes:{{data_hotwaterheating}}</p>
+      <p>airconditioning_yes:{{data_airconditioning}}</p>
+      <p>prefarea_yes:{{data_prefarea}}</p>
+      <p>furnishingstatus_semi_furnished:{{data_furnishingstatus_semi_furnished}}</p>
+      <p>furnishingstatus_unfurnished:{{data_furnishingstatus_unfurnished}}</p>
+      <br>
+      <p>Predicted House Price: ${{ out }}</p>
+    </div>
+    <a  href="{% url 'ckdApp:ckd' %}">House Price Predicition</a>
+    <br>
+</div>
+{% endblock %}
